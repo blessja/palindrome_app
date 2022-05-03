@@ -1,12 +1,15 @@
 require 'sinatra'
 get '/' do
-erb :index
+    @title = "Home"
+    erb :index
 end
 
-get '/about' do 
+get '/about' do
+    @title = "About"
     erb :about
 end
 
-get '/palindrome' do 
+get '/palindrome' do
+    @title = "Palindrome Detector"
     erb :palindrome
 end
